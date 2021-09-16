@@ -50,6 +50,37 @@ void sinrepeticion1()
 
 }
 
+    //Permutacion sin Repeticion N! / (N-R)!
+
+void sinrepeticion2()
+{
+    int i, num, facto=1;    //Factorial N!
+    
+    cout <<"Ingrese valor de N: ";
+    cin >>num;
+
+    for (i=1;i<=num;i++)
+    {
+        facto=facto*i;
+    }
+    cout <<"Factorial de N!: "<<facto<<""<<endl;
+
+    int j, num2, facto2=1, resta, opera2;   //Factorial (N-R)!
+
+    cout <<"Ingrese valor de R: ";
+    cin >>num2;
+    
+    resta=(num-num2);
+    cout<<"N-R = "<<resta<<endl;
+
+    for (j=1; j<=resta; j++)
+    {
+        facto2=facto2*j;
+    }
+    cout <<"Factorial de (N-R)! :" <<facto2<<""<<endl;
+    opera2=facto/facto2;
+    cout <<"El Numero de permutaciones de "<<facto<<"/ "<<facto2<<"="<<opera2<<" " <<endl;
+}
 
 
 
