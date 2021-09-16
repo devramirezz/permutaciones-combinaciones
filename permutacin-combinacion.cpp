@@ -82,6 +82,37 @@ void sinrepeticion2()
     cout <<"El Numero de permutaciones de "<<facto<<"/ "<<facto2<<"="<<opera2<<" " <<endl;
 }
 
+//Permutaciones sin Repeticion N! / N1!*N2!*N3!..
+
+void sinrepeticion3()
+{
+    float i, j, h, factorial=1, numero, factorial12=1, numero2, numero3, factorial13=1, numero4, factorial14=1, operacion;
+    
+    cout <<"Ingrese valor de N:";
+    cin >>numero;
+    cout <<"Cuantos valores son para N en el denominador? Ejemplo: N=9! /N=(2! X 3! X 4!) N denominador: tiene 3 valores (2,3,4) // = ";
+    cin >>numero3;
+
+    for (i=1;i<=numero;i++) // Bucle factorial de N!* 
+    {
+        factorial=factorial*i;
+    }
+    for (j=1;j<=numero3;j++) // Bucle consulta de valores x denominador N!*
+    {
+        cout <<"Ingrese valores de Denominador N";
+        cin >>numero4;
+
+        for (h=1;h<=numero4;h++) // Bucle general de factorial valor R multiplicado con siguiente valor de R*
+        {
+            factorial14=factorial14*h;
+        }
+    }
+    cout <<"El numero de permutaciones es: "<<factorial/factorial14<<" "<<endl;
+
+    return;
+}
+
+
 
 
 
