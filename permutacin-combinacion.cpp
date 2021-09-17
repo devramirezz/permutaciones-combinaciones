@@ -288,7 +288,87 @@ void programa9();
     getch();
 }
 
+//Menu
 
+void menu(){
+		system("cls");
+		cout<<"-------------------------------------------------------------------------------"<<endl<<endl;
+		cout << "\t   Calculadora de permutaciones y combinaciones" << endl<<endl;
+        cout << "\t1  .- Permutaciones con Repeticion N^r" << endl;
+        cout << "\t2  .- Permutaciones sin repeticion N!" << endl;
+        cout << "\t3  .- Permutaciones sin repeticion N! / (N-R)!" << endl;
+        cout << "\t4  .- Permutaciones sin repeticion mas de un tipo N! / N1!*N2!*N3!*... " << endl;
+        cout << "\t5  .- Combinaciones con Repeticion (Simple) (N+R-1)! / R! X (N-1)!" << endl;
+        cout << "\t6  .- Combinaciones con Repeticion -->(N1 X N2)<-- (N+R-1)! / R! X (N-1)! " << endl;
+        cout << "\t7  .- Combinaciones sin repeticion: Simples" << endl; 
+        cout << "\t8  .- Combinaciones sin repeticion: (N1 X N2)" << endl;
+        cout << "\t9  .- Salir" << endl<<endl;
+        cout<<""<<endl<<endl;
+        cout<<"-------------------------------------------------------------------------------"<<endl<<endl;
+        cout << "\t   .- Seleccionar opcion ->";
+}
+
+// Menu Opciones
+main(){
+	int opcion;
+	do{
+		menu();
+		cin>>opcion;
+		switch(opcion){
+			case 1:
+				system("cls");
+				programa1();
+			break;
+
+			case 2:
+				system("cls");
+				programa2();
+			break;
+
+			case 3:
+				system("cls");
+				programa3();
+			break;
+
+			case 4:
+				system("cls");
+				programa4();
+				
+			break;
+
+			case 5:
+				system("cls");
+				programa5();
+			break;
+
+			case 6:
+				system("cls");
+				programa6();
+			break;
+
+			case 7:
+				system("cls");
+				programa7();
+			break;
+
+			case 8:
+				system("cls");
+				programa8();
+			break;
+
+			case 9:
+			system("cls");
+			cout<<"***********************************************"<<endl<<endl;	
+			cout<<"\t\tHasta pronto :( ..."<<endl<<endl;	
+			cout<<"***********************************************"<<endl<<endl;	
+			break;
+
+		}
+	}while(opcion!=8);
+}
+
+
+//FIN DEL PRORAMA
 
 
 
