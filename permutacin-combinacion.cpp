@@ -161,6 +161,61 @@ void combiconrepetsimple()
     
 }
 
+//Combinaciones con Repeticion --> (N1 XN2) <-- (N+R-1)! / R! X (N-1)!
+
+void conbiconrepetn1Xn2()
+{
+    int n1xn2, acum=1, a=1;
+    cout <<"Cuantas operaciones va a realizar con **(N1 XN2)<-- (N+R-1)! / R! X (N-1)! :";
+    cin >>n1Xn2;
+
+    for (a=1;a<=n1xn2;a++)
+    {
+        int i=1, num2=1, facto=1, opera1;
+        cout <<"Ingrese valor de N: ";
+        cin >>num;
+        cout <<"Ingrese valor de R: ";
+        cin >>num2;
+        opera1=(num+num2-1);
+
+        for (i=1;i<=opera1;i++) // Factorial de (N+R-1)!
+        {
+            facto=facto*i;
+        }
+        cout <<"Factorial de (N+R-1)! es: " <<facto<<endl;
+
+        int j=1,facto2=1;
+
+        for (j=1;j<=num2;j+) //Factorial de R!
+        {
+            facto2=facto2*j;
+        }
+        cout <<"Factorial de R es: "<<facto2<<endl;
+
+        int h=1, opera, facto3=1;
+        opera=num-1;
+        cout <<"N-R = " <<num<<" - 1";
+        cout <<" = " <<opera<<endl;
+        
+        for (h=1;h<=opera;h++) //Factorial de (N-1)!
+        {
+            cout <<"Factorial de N-1 es: "<<facto3<<endl;
+        }
+        int k=1, operafinal, op; // Multiplicacion de R! x (N-1)!
+        operafinal=facto2*facto3;
+        cout <<"R! X (N-1)! = "<<facto2<<" X " <<facto3;
+        cout <<" = " <<operafinal;
+
+        //divicion de (N+R-1)! / R! X (N-1)!
+        op=facto/operafinal;
+        cout<<"Resultado de (N+R-1)! / R! X (N-1)!: "<<op<<endl;
+        acum=acum*op;
+    }
+    cout <<"El Numero de Permutaciones para --> (N1 X N2 X ...) <-- : "<<acum<<endl;
+    
+
+}
+
 
 
 
