@@ -212,9 +212,82 @@ void conbiconrepetn1Xn2()
         acum=acum*op;
     }
     cout <<"El Numero de Permutaciones para --> (N1 X N2 X ...) <-- : "<<acum<<endl;
-    
-
 }
+
+/*____________________________________________________________*/
+// Inicio de menu
+
+void programa1 ()
+{
+    cout <<"-Permutaciones con Repeticion N^r"<<endl; //complet
+    conrepeticion();
+    
+    getch();
+}
+
+void programa2()
+{
+    cout <<"-Permutacines sin repeticion N!"<<endl; //complet
+    sinrepeticion1();
+
+    getch();
+}
+
+void programa3()
+{
+    cout <<"-Permutaciones sin repeticion N! / (N_R)!" <<endl; //complet 
+    sinrepeticion2();
+    getch();
+}
+
+void programa4()
+{
+    cout <<"-Permutacion sin Repeticon N! / N1!*N2!*N3!*---"<<endl; //complet
+    sinrepeticion3();
+
+    getch();
+}
+
+void programa5();
+{
+    cout <<"-Permutacin con Repeticion (SIMPLE) (N+R-1)! / R! X (N-1)!"<<endl; //complet
+    combiconrepetsimple();
+
+    getch();
+}
+
+void programa6();
+{
+    cout <<"-combinaciones con Repetcion -->(N1 X N2 X ...) <-- (N+R-1)! / R! X (N-1)!"<<endl; //complet
+    conbiconrepetn1Xn2();
+
+    getch();
+}
+
+void programa7();
+{
+    cout <<"\t1  -Permutaciones con repeticion"<<endl;
+    conrepeticion();
+
+    getch();
+}
+
+void programa8();
+{
+    cout <<"\t1 -Permutaciones con Repeticion "<<endl;
+    conrepeticion();
+
+    getch();
+}
+
+void programa9();
+{
+    coud <<"\t1 -Permutacines con Repeticion"<<endl;
+    conrepeticion();
+
+    getch();
+}
+
 
 
 
