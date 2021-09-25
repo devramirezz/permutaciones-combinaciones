@@ -1,5 +1,5 @@
 //Project created by Kevin Ramirezz
-//ig @kecin_ramirezz1
+//ig @kevin_ramirezz1
 
 #include <iostream>
 #include <conio.h>
