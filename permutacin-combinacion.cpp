@@ -9,7 +9,7 @@
 #include <iomanip>
 using namespace std;
 
-
+//unsigned long long int
 
 // PERMUTACION CON REPETICION N^r
 void conrepeticion(){
@@ -62,9 +62,6 @@ int j,num2,facto2=1,resta,opera2;//SACAMOS FACTORIAL DE (N-R)!
 		opera2=facto/facto2;
 		cout<<"El Numero de permutaciones de "<<facto<<" / "<<facto2<<" = "<<opera2<<" "<<endl;
 }
-
-
---------------------------------------------------------------
 
 //PERMUTACIONES SIN REPETICION N! / N1!*N2!*N3!*...
 void sinrepeticion3(){
@@ -220,19 +217,19 @@ void programa9(){
 
 void menu(){
 		system("cls");
-		cout<<"*******************************************************************************"<<endl<<endl;
-		cout << "\t   Calculadora de permutaciones y combinaciones" << endl<<endl;
-        cout << "\t1  .- Permutaciones con Repeticion N^r" << endl;
-        cout << "\t2  .- Permutaciones sin repeticion N!" << endl;
-        cout << "\t3  .- Permutaciones sin repeticion N! / (N-R)!" << endl;
-        cout << "\t4  .- Permutaciones sin repeticion mas de un tipo N! / N1!*N2!*N3!*... " << endl;
-        cout << "\t5  .- Combinaciones con Repeticion (Simple) (N+R-1)! / R! X (N-1)!" << endl;
-        cout << "\t6  .- Combinaciones con Repeticion -->(N1 X N2)<-- (N+R-1)! / R! X (N-1)! " << endl;
-        cout << "\t7  .- Combinaciones sin repeticion: Simples" << endl; 
-        cout << "\t8  .- Combinaciones sin repeticion: (N1 X N2)" << endl;
-        cout << "\t9  .- Salir" << endl<<endl;
+		cout<<"---------------------------------------------------------------------------------"<<endl<<endl;
+		cout << "   Calculadora de permutaciones y combinaciones" << endl<<endl;
+        cout << ".- Permutaciones con Repeticion N^r" << endl;
+        cout << ".- Permutaciones sin repeticion N!" << endl;
+        cout << ".- Permutaciones sin repeticion N! / (N-R)!" << endl;
+        cout << ".- Permutaciones sin repeticion mas de un tipo N! / N1!*N2!*N3!*... " << endl;
+        cout << ".- Combinaciones con Repeticion (Simple) (N+R-1)! / R! X (N-1)!" << endl;
+        cout << ".- Combinaciones con Repeticion -->(N1 X N2)<-- (N+R-1)! / R! X (N-1)! " << endl;
+        cout << ".- Combinaciones sin repeticion: Simples" << endl; 
+        cout << ".- Combinaciones sin repeticion: (N1 X N2)" << endl;
+        cout << ".- Salir" << endl<<endl;
         cout<<""<<endl<<endl;
-        cout<<"*******************************************************************************"<<endl<<endl;
+        cout<<"---------------------------------------------------------------------------------"<<endl<<endl;
         cout << "\t   .- Seleccionar opcion ->";
 }
 
@@ -277,15 +274,12 @@ main(){
 			break;
 			case 9:
 			system("cls");
-			cout<<"********************************************************"<<endl<<endl;	
+			cout<<"-------------------------------------------------"<<endl<<endl;	
 			cout<<"\t\tHasta pronto :( ..."<<endl<<endl;	
-			cout<<"********************************************************"<<endl<<endl;	
+			cout<<"-------------------------------------------------"<<endl<<endl;	
 			break;
 
 		}
 	}while(opcion!=8);
 }
-
-//Final de programa 
-
 //© Todos los derechos reservados
