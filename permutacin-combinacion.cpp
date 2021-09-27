@@ -7,9 +7,17 @@
 #include <stdlib.h>
 #include <math.h>
 #include <iomanip>
+
+#include <windows.h>
+
+
 using namespace std;
 
-//unsigned long long int
+//Cuadros / lineas 
+void dibujarCuadro(int x1,int y1,int x2,int y2);
+void gotoxy(int x,int y);
+
+
 
 // PERMUTACION CON REPETICION N^r
 void conrepeticion(){
@@ -25,6 +33,7 @@ void conrepeticion(){
     cout<<""<<endl;
     opera1=pow(pot,pot2);
     cout<<"El numero de permutaciones es: "<<opera1<<endl;
+    
 	getch();
 }
 
@@ -33,11 +42,12 @@ void sinrepeticion1(){
 	unsigned long long int i=1,num=1,facto;
 		cout<<"Ingrese valor de N: "<<endl<<endl;
         cin>>num; 
-        for(i=1;i<=num;i++){
+        for(i=1;i<=num;i++)
+		{
             facto=facto*i;
         }
+        
         cout<<"El Numero de permutaciones es: "<<facto<<""<<endl; 
-	
 }
 
 //PERMUTACION SIN REPETICION N! / (N-R)!
@@ -46,20 +56,27 @@ void sinrepeticion2(){
 int i,num,facto=1; //SACAMOS FACTORIAL DE N!
 		cout<<"Ingrese valor de N: ";
         cin>>num;
-        for(i=1;i<=num;i++){
+        for(i=1;i<=num;i++)
+		{
             facto=facto*i;
         }cout<<"Factorial de N! : "<<facto<<""<<endl;
         
-int j,num2,facto2=1,resta,opera2;//SACAMOS FACTORIAL DE (N-R)!
+int j,num2,facto2=1,resta,opera2;// SACAMOS FACTORIAL DE (N-R)!
         cout<<"Ingrese valor de R: ";
         cin>>num2;
+        
         resta=(num-num2);
+        
 		cout<<"N-R = "<<resta<<endl;
-        for(j=1;j<=resta;j++){
+		
+        for(j=1;j<=resta;j++)
+		{
             facto2=facto2*j;
         }
 		cout<<"Factorial de (N-R)! : "<<facto2<<""<<endl;
+		
 		opera2=facto/facto2;
+		
 		cout<<"El Numero de permutaciones de "<<facto<<" / "<<facto2<<" = "<<opera2<<" "<<endl;
 }
 
@@ -70,8 +87,10 @@ void sinrepeticion3(){
         cin>>numero; 
         cout<<"Cuantos valores son para N en el denominador? Ejemplo: N= 9! / N= (2! X 3! X 4!) N denominador: tiene 3 valores (2,3,4) // = ";
         cin>>numero3;
-            for(i=1;i<=numero;i++){/*Primer bucle Se genera el factorial de N!*/
-            factorial=factorial*i;
+        
+            for(i=1;i<=numero;i++)
+		{
+            factorial=factorial*i;	/*Primer bucle Se genera el factorial de N!*/
         }
            for(j=1;j<=numero3;j++)/*Segundo bucle sirve para realizar la consulta de los valores X que estan en el denominador N!*/{
                 cout<<"Ingrese valores del Denominador N ";
@@ -166,9 +185,8 @@ void conbiconrepetn1Xn2(){
 }
 
 
+// 
 
-
-/*------------------------------------------------------------------------------------*/
 void programa1(){
 	cout << ".- Permutaciones con Repeticion N^r" << endl; //COMPLETADO
 	conrepeticion();
@@ -215,25 +233,38 @@ void programa9(){
 	getch();
 }
 
-void menu(){
+
+//Menu 
+
+void menu()
+{
 		system("cls");
-		cout<<"---------------------------------------------------------------------------------"<<endl<<endl;
-		cout << "   Calculadora de permutaciones y combinaciones" << endl<<endl;
-        cout << ".- Permutaciones con Repeticion N^r" << endl;
-        cout << ".- Permutaciones sin repeticion N!" << endl;
-        cout << ".- Permutaciones sin repeticion N! / (N-R)!" << endl;
-        cout << ".- Permutaciones sin repeticion mas de un tipo N! / N1!*N2!*N3!*... " << endl;
-        cout << ".- Combinaciones con Repeticion (Simple) (N+R-1)! / R! X (N-1)!" << endl;
-        cout << ".- Combinaciones con Repeticion -->(N1 X N2)<-- (N+R-1)! / R! X (N-1)! " << endl;
-        cout << ".- Combinaciones sin repeticion: Simples" << endl; 
-        cout << ".- Combinaciones sin repeticion: (N1 X N2)" << endl;
-        cout << ".- Salir" << endl<<endl;
+		system("mode con: cols=80 lines25="); //SE DEFINE LAS DIMENSIONES DE LA VENTANA DEL PROGRAMA A 80 COLUMNAS Y 25 FILAS
+		system("COLOR B0"); //SE DA UN COLOR DE FONDO Y COLOR A LAS LETRAS
+		dibujarCuadro(0,0,98,24); //SE DIBUJA EL CUADRO PRINCIPAL
+		dibujarCuadro(1,1,77,3); //SE DIBUJA EL CUADRO DEL TITULO
+		//cout<<"---------------------------------------------------------------------------------"<<endl<<endl;
+		
+		gotoxy(20,2); cout << "Calculadora de permutaciones y combinaciones" << endl<<endl;
+		
+        cout << "1.- Permutaciones con Repeticion N^r" << endl;
+        cout << "2.- Permutaciones sin repeticion N!" << endl;
+        cout << "3.- Permutaciones sin repeticion N! / (N-R)!" << endl;
+        cout << "4.- Permutaciones sin repeticion mas de un tipo N! / N1!*N2!*N3!*... " << endl;
+        cout << "5.- Combinaciones con Repeticion (Simple) (N+R-1)! / R! X (N-1)!" << endl;
+        cout << "6.- Combinaciones con Repeticion -->(N1 X N2)<-- (N+R-1)! / R! X (N-1)! " << endl;
+        cout << "7.- Combinaciones sin repeticion: Simples" << endl; 
+        cout << "8.- Combinaciones sin repeticion: (N1 X N2)" << endl;
+        cout << "9.- Salir" << endl<<endl;
         cout<<""<<endl<<endl;
         cout<<"---------------------------------------------------------------------------------"<<endl<<endl;
         cout << "\t   .- Seleccionar opcion ->";
 }
 
-main(){
+
+//Switch 
+	main()
+{
 	int opcion;
 	do{
 		menu();
@@ -272,14 +303,59 @@ main(){
 				system("cls");
 				programa8();
 			break;
+			
 			case 9:
 			system("cls");
 			cout<<"-------------------------------------------------"<<endl<<endl;	
-			cout<<"\t\tHasta pronto :( ..."<<endl<<endl;	
-			cout<<"-------------------------------------------------"<<endl<<endl;	
+			cout<<"\t\t Hasta pronto..."<<endl<<endl;	
+			cout<<"-------------------------------------------------"<<endl<<endl<<endl<<endl;
+			
+			cout<<"\t\t Github"<<endl;
+			cout <<"@kevinramirezz1"<<endl<<endl;
+			
+			cout<<"\t\t Instagram"<<endl;
+			cout <<"@kevin_ramirezz1"<<endl;
+			
+			getch();
+			exit (1);
 			break;
 
 		}
 	}while(opcion!=8);
+	
+	getch ();
+	return 0;
+}
+
+
+//FUNCION GOTOXY
+void gotoxy(int x,int y){  
+      HANDLE hcon;  
+      hcon = GetStdHandle(STD_OUTPUT_HANDLE);  
+      COORD dwPos;  
+      dwPos.X = x;  
+      dwPos.Y= y;  
+      SetConsoleCursorPosition(hcon,dwPos);  
+ }
+ 
+ 
+//FUNCION QUE DIBUJA EL CUADRO
+void dibujarCuadro(int x1,int y1,int x2,int y2){
+	int i;
+	
+    for (i=x1;i<x2;i++){
+		gotoxy(i,y1); cout << "\304"; //linea horizontal superior
+		gotoxy(i,y2); cout << "\304"; //linea horizontal inferior
+    }
+
+    for (i=y1;i<y2;i++){
+		gotoxy(x1,i); cout <<"\263"; //linea vertical izquierda
+		gotoxy(x2,i); cout <<"\263"; //linea vertical derecha
+	}
+	
+    gotoxy(x1,y1); cout<< "\332"; 
+    gotoxy(x1,y2); cout<< "\300";
+    gotoxy(x2,y1); cout<< "\277";
+    gotoxy(x2,y2); cout<< "\331";
 }
 //© Todos los derechos reservados
