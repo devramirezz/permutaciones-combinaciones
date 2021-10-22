@@ -1,32 +1,27 @@
->  actualización - 2021-10-21 24:00:12 Thursday
+>  actualización -  2021-10-22 14:40:15 Friday
 
-## PERMUTACIONES Y COMBINACIONES
-
-------------
+## INDUCCION MATEMATICAS
 &hearts;
 
 **¿Que hay en la actualización?**
 
 - Código más fresco, fluido y compresible.
-- trabajando a primera ejecución - *trabajando* 
+
 ------------
-![2021-10-21 19_35_19-Greenshot](https://user-images.githubusercontent.com/76236808/138381150-7f2d1783-411b-4a32-b905-e8998d5b8d2d.png)
+![2021-10-22 14_43_28-Greenshot](https://user-images.githubusercontent.com/76236808/138520766-8a25ac23-1d31-4365-a225-3e4122c860cc.png)
 ------------
-![2021-10-21 19_35_39-Greenshot](https://user-images.githubusercontent.com/76236808/138381167-fb514958-1b3b-43e8-a13e-27a001980b30.png)
+![2021-10-22 14_44_05-Greenshot](https://user-images.githubusercontent.com/76236808/138520778-738e84ec-9f73-44e7-acbf-b4a7bc9ab131.png)
 ------------
-![2021-10-21 19_36_32-Greenshot](https://user-images.githubusercontent.com/76236808/138381188-c8bd61f4-8958-4a8f-b0b3-97c28b8059ad.png)
+![2021-10-22 14_44_43-Greenshot](https://user-images.githubusercontent.com/76236808/138520823-cfcf8758-bff8-4ca9-92fa-c59c929909a1.png)
+------------
 ------------
 
-#####Calculadora incluye
+#####¿Que hay adentro?
 
-1. Permutaciones con repetición
-2. Permutaciones sin repetición
-3. Permutaciones sin repetición de un tipo
-4. Permutaciones sin repetición más de un tipo
-5. Combinaciones con repetición
-6. Combinaciones con repetición tipo (N1 X N2)
-7. Combinaciones sin repetición
-8. Combinaciones sin repetición tipo (N1 X N2)
+1. PRODUCTO DE FACTORES PRIMOS
+2. MÁXIMO COMÚN DIVISOR
+3. ALGORITMO DE LA DIVISIÓN
+4. ALGORITMO DE EUCLIDES
 
 
 ------------
